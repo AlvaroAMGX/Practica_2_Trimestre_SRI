@@ -12,8 +12,6 @@ Se pide las instalación, configuración y puesta en marcha de un servidor que o
 
 5.Se habilitará el acceso mediante ssh y sftp. 
 
-6.Se configura de forma adecuada postfix y dovecot imap y pop3
-
 - Se automatizará mediante el uso de scripts: 
 
   - La creación de usuarios y del directorio correspondiente para el alojamiento web 

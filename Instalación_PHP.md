@@ -29,3 +29,4 @@ phpinfo();
 ?>
 ```
 Luego, abre un navegador web y navega a http://tu-dominio.com/info.php. Deberías ver una página con información detallada sobre la configuración de PHP y sus módulos.
+

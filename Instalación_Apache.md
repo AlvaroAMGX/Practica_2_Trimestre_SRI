@@ -16,7 +16,7 @@ Puedes verifica que Apache se haya instalado correctamente ejecutando el siguien
 sudo systemctl status apache2
 ```
 Este comando mostrará el estado de Apache. Si Apache se ha instalado correctamente, debería mostrarse como "active" (activo) en color verde.
-
+![Apache2](https://github.com/AlvaroAMGX/Practica_2_Trimestre_SRI/blob/main/capturas/apache2.png)
 Si tienes un firewall habilitado, deberás abrir el puerto HTTP para permitir que los clientes se conecten a tu servidor web Apache. Ejecuta el siguiente comando para abrir el puerto HTTP:
 ```bash
 sudo ufw allow 'Apache'

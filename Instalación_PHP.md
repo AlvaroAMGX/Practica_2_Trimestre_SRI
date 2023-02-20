@@ -22,15 +22,4 @@ Si tienes un servidor web Apache instalado, deberás reiniciarlo para que los ca
 ```bash
 sudo systemctl restart apache2
 ```
-Puedes verificar que PHP esté funcionando correctamente creando un archivo info.php en la carpeta public_html de tu servidor web con el siguiente contenido,para hacer este archivo primero usaremos este comando:
-```bash
-sudo nano 
-```
-Y dentro escribimeremos esto:
-```php
-<?php
-phpinfo();
-?>
-```
-Luego, abre un navegador web y navega a http://tu-dominio.com/info.php. Deberías ver una página con información detallada sobre la configuración de PHP y sus módulos.
 

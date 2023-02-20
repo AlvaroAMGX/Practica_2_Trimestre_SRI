@@ -2,9 +2,9 @@
 ## A realizar:
 Se pide las instalación, configuración y puesta en marcha de un servidor que ofrezca servicio de alojamiento web configurable:
 
-1.Se dará alojamiento a páginas web tanto estáticas como dinámicas con “php”
+1.Se dará alojamiento a [páginas web](https://github.com/AlvaroAMGX/Practica_2_Trimestre_SRI/blob/main/Instalación_Apache) tanto estáticas como dinámicas con “[php](https://github.com/AlvaroAMGX/Practica_2_Trimestre_SRI/blob/main/Instalación_Apache) ”
 
-2.Los clientes dispondrán de un directorio de usuario con una página web por defecto. 
+2.Los clientes dispondrán de un [directorio de usuario con una página web por defecto](https://github.com/AlvaroAMGX/Practica_2_Trimestre_SRI/blob/main/directorio_pagina_defecto). 
 
 3.Además contarán con una base de datos sql que podrán administrar con phpmyadmin
 

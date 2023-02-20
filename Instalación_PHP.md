@@ -17,7 +17,7 @@ Verifica que PHP se haya instalado correctamente ejecutando el siguiente comando
 php -v
 ```
 Este comando mostrará la versión de PHP instalada en el sistema.
-![php1](https://github.com/AlvaroAMGX/Practica_2_Trimestre_SRI/blob/main/capturas/php2.png)
+![php1](https://github.com/AlvaroAMGX/Practica_2_Trimestre_SRI/blob/main/capturas/php2.png)  
 Si tienes un servidor web Apache instalado, deberás reiniciarlo para que los cambios surtan efecto:
 ```bash
 sudo systemctl restart apache2

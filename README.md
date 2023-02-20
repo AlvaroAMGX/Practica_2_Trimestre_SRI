@@ -15,7 +15,8 @@ Se pide las instalación, configuración y puesta en marcha de un servidor que o
 - Se automatizará mediante el uso de scripts: 
 
   - La creación de usuarios y del directorio correspondiente para el alojamiento web 
-Host virtual en apache
+  
+  - Host virtual en apache
 
   - Creación de usuario del sistema para acceso a ftp, ssh, smtp, …
 

@@ -8,7 +8,7 @@ Se pide las instalación, configuración y puesta en marcha de un servidor que o
 
 3.Además contarán con una base de datos [sql](https://github.com/AlvaroAMGX/Practica_2_Trimestre_SRI/blob/main/instalación_sql.md) que podrán administrar con [phpmyadmin]()
 
-4.Los clientes podrán acceder mediante ftp para la administración de archivos configurando adecuadamente TLS
+4.Los clientes podrán acceder mediante [ftp]() para la administración de archivos configurando adecuadamente TLS
 
 5.Se habilitará el acceso mediante ssh y sftp. 
 

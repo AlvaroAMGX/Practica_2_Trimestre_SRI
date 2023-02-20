@@ -1,18 +1,17 @@
 # Guia de como instalar Apache para dar alojamiento a páginas web
-Para instalar el servidor web Apache en un sistema operativo, los pasos específicos pueden variar según la plataforma. A continuación, se describen algunos pasos generales para instalar Apache en un sistema Linux basado en Debian o Ubuntu:
+Para instalar el servidor web Apache en un sistema operativo linux primero deberemos asegurarnos de que todos este actualizado y en la ultima versión posible asi evitaremos que haya problemas por incompatibilidades
 
 Actualiza el sistema operativo y los paquetes existentes ejecutando el siguiente comando en la línea de comandos:
-sql
-Copy code
+```bash
 sudo apt update && sudo apt upgrade
-Instala Apache ejecutando el siguiente comando:
-Copy code
+```
+Luego de esto instalaremos Apache ejecutando el siguiente comando:
+```bash
 sudo apt install apache2
-Este comando instalará el servidor web Apache en el sistema.
-
+```
+Este comando instalará el servidor web Apache en el sistema como podemos ver en la captura.
+![Apache1]()
 Verifica que Apache se haya instalado correctamente ejecutando el siguiente comando:
-lua
-Copy code
 sudo systemctl status apache2
 Este comando mostrará el estado de Apache. Si Apache se ha instalado correctamente, debería mostrarse como "active" (activo).
 

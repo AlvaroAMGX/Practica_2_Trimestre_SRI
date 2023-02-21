@@ -1,18 +1,23 @@
-# Script que hara automatiza todo:
+# Script que automatiza todo:
+# Creacion de usurario y directorio
 ```bash
 #!/bin/bash
 
-# Pedir el nombre del usuario y del subdominio
+# Pedir el nombre del usuario,del subdominio y la IP del cliente
 read -p "Ingrese el nombre de usuario: " usuario
 read -p "Ingrese el nombre del subdominio: " subdominio
+read -p "Ingrese la IP del cliente: " ip
 
 # Crear el usuario del sistema y su directorio correspondiente para alojamiento web y 
 # se crea un usuario para acceso a ftp, ssh y smtp
 useradd -m -d /var/www/$subdominio $usuario
+```
 
+# Creación del host virtual
+
+# DNS
+```bash
 	#BIND
-	# Defino la dirección IP
-	ip="10.4.0.133"
 	# Añade la zona al archivo named.conf.local
 	echo "zone \"$subdominio\" {
 	    type master;
@@ -40,10 +45,15 @@ useradd -m -d /var/www/$subdominio $usuario
 
 #Reinicia el servicio BIND
 	sudo systemctl restart bind9
-
+```
+# Creación de la base de datos
+```bash
 #Crear una base de datos y un usuario con todos los permisos
-mysql -e "CREATE DATABASE $usuario; CREATE USER '$usuario'@'localhost' IDENTIFIED BY 'password'; GRANT ALL PRIVILEGES ON $usuario.* TO '$usuario'@'localhost'; FLUSH PRIVILEGES;"
-
-#Habilitar la ejecuci\u00f3n de aplicaciones Python con el servidor web
+mysql -e "CREATE DATABASE $usuario; CREATE USER '$usuario'@'localhost' IDENTIFIED BY 'password'; 
+GRANT ALL PRIVILEGES ON $usuario.* TO '$usuario'@'localhost'; FLUSH PRIVILEGES;"
+```
+# Habilitar Python para que puedas ejecutar aplicaciones 
+```bash
+#Habilitar la ejecución de aplicaciones Python con el servidor web
 a2enmod wsgi
 ```

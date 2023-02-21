@@ -12,7 +12,7 @@ Se pide las instalación, configuración y puesta en marcha de un servidor que o
 
 5.Se habilitará el acceso mediante [ssh y sftp](https://github.com/AlvaroAMGX/Practica_2_Trimestre_SRI/blob/main/Instalación_ssh_y_ftp.md). 
 
-- Se automatizará mediante el uso de [scripts](): 
+- Se automatizará mediante el uso de [scripts](https://github.com/AlvaroAMGX/Practica_2_Trimestre_SRI/blob/main/script.md): 
 
   - La creación de usuarios y del directorio correspondiente para el alojamiento web 
   

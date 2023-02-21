@@ -10,7 +10,7 @@ Se pide las instalación, configuración y puesta en marcha de un servidor que o
 
 4.Los clientes podrán acceder mediante [ftp](https://github.com/AlvaroAMGX/Practica_2_Trimestre_SRI/blob/main/Instalación_ftp.md) para la administración de archivos configurando adecuadamente TLS
 
-5.Se habilitará el acceso mediante ssh y sftp. 
+5.Se habilitará el acceso mediante [ssh y sftp](https://github.com/AlvaroAMGX/Practica_2_Trimestre_SRI/blob/main/Instalación_ssh_y_ftp.md). 
 
 - Se automatizará mediante el uso de scripts: 
 

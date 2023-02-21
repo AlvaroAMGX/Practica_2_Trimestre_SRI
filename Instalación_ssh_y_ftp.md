@@ -21,3 +21,4 @@ Si cuando nos intentamos conectar tenemos problemas debemos ver si tenemos el fi
 ```bash
 sudo ufw allow ssh
 ```
+Por ultimo recordad que al instalar el paquete ssh también incorpora un servidor ftp seguro y un cliente ftp seguro.

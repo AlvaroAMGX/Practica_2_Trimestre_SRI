@@ -1,20 +1,22 @@
 # Script que automatiza todo:
-# Creacion de usurario y directorio
+# Creacion de usurario y directorio correspondiente para el alojamiento web
+Este script te pedira el nombre,el subdominio y la ip para configuraciones de despues y creara el usuario con su directorio,recordar que cuando creamos el usuario si lo hemos instalado y configurado correctatmente se crearan los usuarios ftp y ssh automaticamente.
 ```bash
-#!/bin/bash
+	#!/bin/bash
 
-# Pedir el nombre del usuario,del subdominio y la IP del cliente
-read -p "Ingrese el nombre de usuario: " usuario
-read -p "Ingrese el nombre del subdominio: " subdominio
-read -p "Ingrese la IP del cliente: " ip
+	# Pedir el nombre del usuario,del subdominio y la IP del cliente
+	read -p "Ingrese el nombre de usuario: " usuario
+	read -p "Ingrese el nombre del subdominio: " subdominio
+	read -p "Ingrese la IP del cliente: " ip
 
-# Crear el usuario del sistema y su directorio correspondiente para alojamiento web y 
-# se crea un usuario para acceso a ftp, ssh y smtp
-useradd -m -d /var/www/$subdominio $usuario
+	# Crear el usuario del sistema y su directorio correspondiente para alojamiento web y 
+	# se crea un usuario para acceso a ftp, ssh y smtp
+	useradd -m -d /var/www/$subdominio $usuario
 ```
-
 # Creación del host virtual
+```bash
 
+```
 # DNS
 ```bash
 	#BIND
@@ -43,17 +45,17 @@ useradd -m -d /var/www/$subdominio $usuario
 
 	echo "$ip       IN      PTR     $subdominio." >> cat /etc/bind/db.10
 
-#Reinicia el servicio BIND
+	#Reinicia el servicio BIND
 	sudo systemctl restart bind9
 ```
 # Creación de la base de datos
 ```bash
-#Crear una base de datos y un usuario con todos los permisos
-mysql -e "CREATE DATABASE $usuario; CREATE USER '$usuario'@'localhost' IDENTIFIED BY 'password'; 
-GRANT ALL PRIVILEGES ON $usuario.* TO '$usuario'@'localhost'; FLUSH PRIVILEGES;"
+	#Crear una base de datos y un usuario con todos los permisos
+	mysql -e "CREATE DATABASE $usuario; CREATE USER '$usuario'@'localhost' IDENTIFIED BY 'password'; 
+	GRANT ALL PRIVILEGES ON $usuario.* TO '$usuario'@'localhost'; FLUSH PRIVILEGES;"
 ```
 # Habilitar Python para que puedas ejecutar aplicaciones 
 ```bash
-#Habilitar la ejecución de aplicaciones Python con el servidor web
-a2enmod wsgi
+	#Habilitar la ejecución de aplicaciones Python con el servidor web
+	a2enmod wsgi
 ```

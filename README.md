@@ -18,7 +18,7 @@ Se pide las instalación, configuración y puesta en marcha de un servidor que o
   
   - Host virtual en apache
 
-  - Creación de usuario del sistema para acceso a ftp, ssh, smtp, …
+  - Creación de usuario del sistema para acceso a ftp, ssh ....
 
   - Se creará un subdominio en el servidor DNS con las resolución directa e inversa
 

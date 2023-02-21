@@ -1,5 +1,5 @@
 # Script que automatiza todo:
-# Creacion de usurario y directorio correspondiente para el alojamiento web
+## Creacion de usurario y directorio correspondiente para el alojamiento web
 Este script te pedira el nombre,el subdominio y la ip para configuraciones de despues y creara el usuario con su directorio,recordar que cuando creamos el usuario si lo hemos instalado y configurado correctatmente se crearan los usuarios ftp y ssh automaticamente.
 ```bash
 	#!/bin/bash
@@ -13,11 +13,11 @@ Este script te pedira el nombre,el subdominio y la ip para configuraciones de de
 	# se crea un usuario para acceso a ftp, ssh y smtp
 	useradd -m -d /var/www/$subdominio $usuario
 ```
-# Creación del host virtual
+## Creación del host virtual
 ```bash
 
 ```
-# DNS
+## DNS
 ```bash
 	#BIND
 	# Añade la zona al archivo named.conf.local
@@ -48,13 +48,13 @@ Este script te pedira el nombre,el subdominio y la ip para configuraciones de de
 	#Reinicia el servicio BIND
 	sudo systemctl restart bind9
 ```
-# Creación de la base de datos
+## Creación de la base de datos
 ```bash
 	#Crear una base de datos y un usuario con todos los permisos
 	mysql -e "CREATE DATABASE $usuario; CREATE USER '$usuario'@'localhost' IDENTIFIED BY 'password'; 
 	GRANT ALL PRIVILEGES ON $usuario.* TO '$usuario'@'localhost'; FLUSH PRIVILEGES;"
 ```
-# Habilitar Python para que puedas ejecutar aplicaciones 
+## Habilitar Python para que puedas ejecutar aplicaciones 
 ```bash
 	#Habilitar la ejecución de aplicaciones Python con el servidor web
 	a2enmod wsgi

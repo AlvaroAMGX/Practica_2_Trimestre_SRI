@@ -11,7 +11,7 @@ Ahora editaremos el archivo de configuración para activar el puerto 22 que es e
 ```bash 
 sudo nano /etc/ssh/sshd_config
 ```
-Eliminaremos esta almohadilla:
+Eliminaremos esta almohadilla:  
 ![ssh1](https://github.com/AlvaroAMGX/Practica_2_Trimestre_SRI/blob/main/capturas/ssh.png)
 Por ultimo reiniciaremos el servicio para que aplique las configuraciones y active el puerto
 ```bash

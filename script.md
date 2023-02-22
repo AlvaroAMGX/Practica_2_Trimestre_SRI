@@ -15,7 +15,18 @@ Este script te pedira el nombre,el subdominio y la ip para configuraciones de de
 ```
 ## Creación del host virtual
 ```bash
-
+	#Creación del archivo de configuración del usuario y luego creación del virtual host
+	sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/$nombre.conf
+				echo "<VirtualHost *:80>
+				    ServerAdmin admin@example.com
+				    ServerName $nombre.com
+				    ServerAlias www.$nombre.com
+				    DocumentRoot /var/www/$nombre
+				    ErrorLog ${APACHE_LOG_DIR}/error.log
+				    CustomLog ${APACHE_LOG_DIR}/access.log combined
+				</VirtualHost>" >> /etc/apache2/sites-available/$nombre.conf
+	#Habilitar los virtual hosts
+	sudo a2ensite $nombre.conf
 ```
 ## DNS
 ```bash
@@ -55,6 +66,7 @@ Este script te pedira el nombre,el subdominio y la ip para configuraciones de de
 	GRANT ALL PRIVILEGES ON $usuario.* TO '$usuario'@'localhost'; FLUSH PRIVILEGES;"
 ```
 ## Habilitar Python para que puedas ejecutar aplicaciones 
+Primero deberemos instalar 
 ```bash
 	#Habilitar la ejecución de aplicaciones Python con el servidor web
 	a2enmod wsgi

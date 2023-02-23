@@ -82,3 +82,44 @@ Tambien hice un script que lo deshabilita por si fuera necesario:
 	#Deshabilitar la ejecución de aplicaciones Python con el servidor web
 	sudo a2dismod wsgi
 ```
+## Script completo
+Aqui dejo el script completo añadi por ultimo un menu para poder escoger la opción que quiera el usuario:
+```bash
+#!/bin/bash
+function crear_usuario {}
+
+function crear_virtualhost {}
+
+function configurar_dns {}
+
+function crear_bd {}
+
+function habilitar_wsgi {}
+
+function deshabilitar_wsgi {}
+
+function menu 
+	{
+		echo "Buenos dias ¿que desea hacer hoy?"
+		echo "1. Crear usuario en Apache"
+		echo "2. Crea el virtual host"
+		echo "3. Configurar el servidor DNS"
+		echo "4. Crear base de datos"
+		echo "5. Habilitar ejecución de aplicaciones con Python"
+		echo "6. Deshabilitar ejecución de aplicaciones con Python"
+		echo "7. Salir"
+		echo "Dime tu opcion"
+		read opc
+		case $opc in
+			1)crear_usuario;;
+			2)creaar_virtual;;
+			3)crear_bd;;
+			4)habilitar_wsgi;;
+			5);;
+			6);;
+			7)exit;;
+			*)echo "La opción escogida es incorrecta";sleep 3;clear;menu;;
+		esac
+	}
+menu
+``` 

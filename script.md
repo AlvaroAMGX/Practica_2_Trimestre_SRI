@@ -14,6 +14,7 @@ Este script te pedira el nombre,el subdominio y la ip para configuraciones de de
 	useradd -m -d /var/www/$subdominio $usuario
 ```
 ## Creación del host virtual
+Esta parte del script creara el archivo del sitio que hemos creado y habilitara el sitio para que se pueda acceder
 ```bash
 	#Creación del archivo de configuración del usuario y luego creación del virtual host
 	sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/$nombre.conf
@@ -60,14 +61,24 @@ Este script te pedira el nombre,el subdominio y la ip para configuraciones de de
 	sudo systemctl restart bind9
 ```
 ## Creación de la base de datos
+Esta parte del script creara un usuario con la contraseña password,tambien creara 
 ```bash
 	#Crear una base de datos y un usuario con todos los permisos
 	mysql -e "CREATE DATABASE $usuario; CREATE USER '$usuario'@'localhost' IDENTIFIED BY 'password'; 
 	GRANT ALL PRIVILEGES ON $usuario.* TO '$usuario'@'localhost'; FLUSH PRIVILEGES;"
 ```
 ## Habilitar Python para que puedas ejecutar aplicaciones 
-Primero deberemos instalar 
+Primero deberemos instalar el modulo wsgi con este comando:
+```bash
+	sudo apt-get install libapache2-mod-wsgi
+```
+Esta parte del script habilitara el modulo para ejecutar aplicaciones aplicaciones de python
 ```bash
 	#Habilitar la ejecución de aplicaciones Python con el servidor web
 	a2enmod wsgi
+```
+Tambien hice un script que lo deshabilita por si fuera necesario:
+```bash
+	#Deshabilitar la ejecución de aplicaciones Python con el servidor web
+	sudo a2dismod wsgi
 ```

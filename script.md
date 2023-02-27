@@ -30,7 +30,7 @@ Esta parte del script creara el archivo del sitio que hemos creado y habilitara 
 	sudo a2ensite $nombre.conf
 ```
 ## DNS
-Aqui tenemos la partede nuestro script encargada del DNS que nos generara la zona directa e inversa de nuestro subdominio
+Aqui tenemos la parte de nuestro script encargada del DNS que nos generara la zona directa e inversa de nuestro subdominio
 ```bash
 	#BIND
 	# Añade la zona al archivo named.conf.local
